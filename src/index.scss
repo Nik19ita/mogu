@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter Regular"),
+    url("./assets/fonts/hinted-Inter-Regular.woff2") format("woff2"),
+    url("./assets/fonts/hinted-Inter-Regular.woff") format("woff"),
+    url("./assets/fonts/hinted-Inter-Regular.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter Medium"),
+    url("./assets/fonts/hinted-Inter-Medium.woff2") format("woff2"),
+    url("./assets/fonts/hinted-Inter-Medium.woff") format("woff"),
+    url("./assets/fonts/hinted-Inter-Medium.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald Regular"),
+    url("../src/assets/fonts/hinted-Oswald-Regular.woff2") format("woff2"),
+    url("../src/assets/fonts/hinted-Oswald-Regular.woff") format("woff"),
+    url("../src/assets/fonts/hinted-Oswald-Regular.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald Medium"),
+    url("../src/assets/fonts/hinted-Oswald-Medium.woff2") format("woff2"),
+    url("../src/assets/fonts/hinted-Oswald-Medium.woff") format("woff"),
+    url("../src/assets/fonts/hinted-Oswald-Medium.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", "Osward", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+

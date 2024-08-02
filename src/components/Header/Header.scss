@@ -1,0 +1,39 @@
+.header {
+  padding: 8px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 40px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 33px;
+  }
+
+  &__item {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  &__button {
+    min-width: 129px;
+    min-height: 64px;
+    margin-left: auto;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 48px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background: #000000;
+  }
+}

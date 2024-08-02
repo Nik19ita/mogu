@@ -1,0 +1,111 @@
+@import "../../constants/constants.scss";
+
+$color: #222fdc;
+
+.hero {
+  padding: 50px 0;
+
+  &__container {
+    display: flex;
+  }
+
+  &__left-block {
+    position: relative;
+    padding: 24px;
+  }
+
+  &__h1 {
+    margin-bottom: 24px;
+    padding-right: 60px;
+    font-family: $fontFamilyOsward;
+    font-size: 90px;
+    font-weight: 500;
+    line-height: 80px;
+    letter-spacing: -2px;
+    color: $color;
+  }
+
+  &__paragraf {
+    margin-bottom: 65px;
+    font-family: $fontFamilyInter;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: $color;
+  }
+
+  &__block-spans {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 11px;
+    justify-content: space-between;
+    padding: 0 81px 0 0px;
+  }
+
+  &__span {
+    display: inline-block;
+    padding: 0 17px;
+    font-family: $fontFamilyInter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 48px;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    margin-right: 24px;
+    font-size: 0;
+    min-height: 100px;
+    border: 2px solid #222fdc;
+    border-radius: 30px;
+  }
+
+  &__input {
+    flex: 1 1 0;
+    padding-left: 24px;
+    font-family: $fontFamilyInter;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    border: none;
+    border-radius: 30px;
+  }
+
+  &__button {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    min-width: 208px;
+    min-height: 98px;
+    background-image: url(../../assets/img/hero/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #222fdc;
+    border: none;
+    border-radius: 30px;
+  }
+
+  &__right-block {
+    position: relative;
+  }
+
+  &__img-pen {
+    position: absolute;
+    bottom: -144px;
+    left: 51%;
+    transform: translateX(-50%);
+  }
+
+  &__arrow-down {
+    position: absolute;
+    bottom: -90px;
+    left: 24px;
+  }
+}

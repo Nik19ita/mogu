@@ -1,0 +1,96 @@
+@import "../../constants/constants.scss";
+$color-artacal-1: #3c711e;
+
+.about {
+  position: relative;
+  padding: 72px 0;
+
+  &__container {
+    position: absolute;
+    top: 1021px;
+
+    border-radius: 30px;
+    background-color: white;
+    z-index: 10;
+  }
+
+  &__content {
+    padding-top: 64px;
+  }
+
+  &__people-mogu {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__top-block {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.artical-1 {
+  flex: 1 1 0;
+  min-height: 826px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 38px;
+  border-radius: 30px;
+  background-color: #fbeaef;
+
+  &__h2 {
+    width: 95%;
+    font-family: $fontFamilyOsward;
+    font-size: 78px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -6px;
+    text-align: center;
+    color: $color-artacal-1;
+  }
+
+  &__p {
+    font-family: $fontFamilyInter;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 52px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: center;
+    color: $color-artacal-1;
+  }
+}
+
+.artical-2 {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 826px;
+  padding: 24px 0;
+  border-radius: 30px;
+  background-color: #000000;
+
+  &__h2 {
+    margin-bottom: 15px;
+    font-family: $fontFamilyOsward;
+    font-size: 78px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -4px;
+    text-align: center;
+    color: white;
+  }
+
+  &__p {
+    margin-bottom: 28px;
+    font-family: $fontFamilyInter;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 52px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: center;
+    color: #c3c3c3;
+  }
+}
