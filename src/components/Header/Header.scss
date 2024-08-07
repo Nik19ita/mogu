@@ -10,18 +10,25 @@
     margin-right: 40px;
   }
 
+  &__burger-menu {
+    display: none;
+  }
+
   &__list {
     list-style: none;
     display: flex;
     gap: 33px;
   }
 
-  &__item {
+  &__link {
+    cursor: pointer;
+    text-decoration: none;
     font-family: "Inter";
     font-size: 16px;
     font-weight: 500;
     line-height: 48px;
     text-align: center;
+    color: #000000;
   }
 
   &__button {
@@ -35,5 +42,31 @@
     border: none;
     border-radius: 30px;
     background: #000000;
+  }
+}
+
+//
+
+@media (max-width: 376px) {
+  .header {
+    padding: 9px 0;
+    &__container {
+      position: relative;
+      justify-content: space-between;
+    }
+
+    &__nav,
+    &__button {
+      display: none;
+    }
+
+    &__logo {
+      width: 130px;
+    }
+
+    &__burger-menu {
+      display: block;
+    }
+
   }
 }

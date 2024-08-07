@@ -44,6 +44,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -64,4 +65,13 @@ body {
   padding: 0 64px;
 }
 
+@media (max-width: 376px) {
+  .container {
+    max-width: 376px;
+    padding: 0 20px;
+  }
+}
 
+button {
+  cursor: pointer;
+}

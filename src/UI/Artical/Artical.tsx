@@ -1,0 +1,2 @@
+import './Artical.scss'
+

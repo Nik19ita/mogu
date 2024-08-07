@@ -1,4 +1,4 @@
-export interface IHeaderContnentProps {
+export interface IHeaderContentProps {
   nav: {
     aboutUs: string;
     cases: string;
@@ -7,7 +7,7 @@ export interface IHeaderContnentProps {
   button: string;
 }
 
-export interface IHeroContnentProps {
+export interface IHeroContentProps {
   h1: string;
   paragraf: string;
   spans: {
@@ -16,6 +16,8 @@ export interface IHeroContnentProps {
     span_3: string;
   };
   input: string;
+  button: string;
+  popup_1: string;
 }
 
 interface MainBlock {
@@ -23,7 +25,7 @@ interface MainBlock {
   p: string;
 }
 
-interface MainBlockPlus  {
+interface MainBlockPlus {
   h2: string;
   p: string;
   span_1: string;
@@ -37,4 +39,32 @@ export interface IMainContnentProps {
   block_3: MainBlockPlus;
   block_4: MainBlock;
   block_5: MainBlock;
+}
+
+export interface ISources {
+  srcSet: string;
+  media: string;
+}
+
+export interface IimgAttr {
+  src: string;
+  alt: string;
+}
+
+export interface ICasesContentProps {
+  "button 1": string;
+  "button 2": string;
+  "button 3": string;
+  "button 4": string;
+  "button 5": string;
+
+  h2: string;
+  p: string;
+}
+
+export interface IFooterContentProps {
+  h2: string;
+  input_1: string;
+  input_2: string;
+  button: string;
 }

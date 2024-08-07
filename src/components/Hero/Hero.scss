@@ -3,20 +3,23 @@
 $color: #222fdc;
 
 .hero {
-  padding: 50px 0;
+  padding: 50px 0 127px;
 
   &__container {
     display: flex;
+    min-height: 644px;
+    gap: 24px;
   }
 
   &__left-block {
+    flex: 1 1 0;
     position: relative;
     padding: 24px;
   }
 
   &__h1 {
     margin-bottom: 24px;
-    padding-right: 60px;
+    padding-right: 35px;
     font-family: $fontFamilyOsward;
     font-size: 90px;
     font-weight: 500;
@@ -58,7 +61,6 @@ $color: #222fdc;
   &__form {
     position: relative;
     display: flex;
-    margin-right: 24px;
     font-size: 0;
     min-height: 100px;
     border: 2px solid #222fdc;
@@ -83,7 +85,7 @@ $color: #222fdc;
     top: -1px;
     right: -1px;
     min-width: 208px;
-    min-height: 98px;
+    min-height: 99px;
     background-image: url(../../assets/img/hero/arrow-right.svg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -92,20 +94,211 @@ $color: #222fdc;
     border-radius: 30px;
   }
 
-  &__right-block {
+  &__arrow-down {
+    position: absolute;
+    bottom: -90px;
+    left: 24px;
+    animation-name: arrowRiseUp;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes arrowRiseUp {
+    from {
+      transform: translateY(0);
+    }
+
+    20% {
+      transform: translateY(-100%);
+    }
+
+    40% {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin animate {
+  animation-name: visible;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+
+$animate-delay: 1s;
+
+.hero-right-block {
+  flex: 1 1 0;
+  position: relative;
+  padding: 19px 24px;
+  border-radius: 30px;
+  background-color: #222fdc;
+
+  &__button {
+    margin-bottom: 183px;
+    min-width: 190px;
+    padding: 0 10px;
+    font-family: $fontFamilyInter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0.10000000149011612px;
+    text-align: center;
+    color: #1839cf;
+    border: none;
+    border-radius: 10px;
+  }
+
+  &__imgs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    padding-left: 87px;
+  }
+
+  &__svg {
+    @include animate;
+
+    &_1 {
+      animation-delay: $animate-delay;
+    }
+
+    &_2 {
+      animation-delay: calc($animate-delay * 3);
+    }
+
+    &_3 {
+      animation-delay: calc($animate-delay * 4);
+    }
+
+    &_4 {
+      animation-delay: calc($animate-delay * 6);
+    }
+
+    &_5 {
+      animation-delay: calc($animate-delay * 7);
+    }
+  }
+
+  &__svg:not(:first-child) {
+    margin-left: -32px;
+  }
+
+  &__svg-1 {
     position: relative;
+  }
+
+  &__cursor {
+    position: absolute;
+    bottom: -12px;
+    right: 17px;
+    @include animate;
+    animation-delay: calc($animate-delay * 2);
+  }
+
+  &__popup-1 {
+    @include animate;
+    animation-delay: calc($animate-delay * 1.5);
+    position: absolute;
+    bottom: -89px;
+    right: -52px;
+    width: 139px;
+    height: 64px;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: center;
+    color: #1839cf;
+    border-radius: 16px;
+    background-color: #ffffff;
+  }
+
+  &__svg-3 {
+    position: relative;
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: -111px;
+    left: -157px;
+    @include animate;
+    animation-delay: calc($animate-delay * 5);
+  }
+
+  @keyframes pen {
+    from {
+      transform: translate(-50%, 50%);
+    }
+
+    to {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  @mixin animatePen {
+    animation-name: pen;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
   }
 
   &__img-pen {
     position: absolute;
     bottom: -144px;
     left: 51%;
-    transform: translateX(-50%);
+    @include animatePen;
   }
+}
 
-  &__arrow-down {
-    position: absolute;
-    bottom: -90px;
-    left: 24px;
+@media (max-width: 376px) {
+  .hero {
+    padding: 0;
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left-block {
+      padding: 0;
+      padding-top: 17px;
+    }
+
+    &__h1 {
+      width: 88%;
+      margin-bottom: 20px;
+      font-size: 44px;
+      line-height: 50px;
+    }
+
+    &__paragraf {
+      width: 95%;
+      margin-bottom: 29px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__span {
+      height: 41px;
+      padding: 0 10px;
+      font-size: 14px;
+    }
   }
 }

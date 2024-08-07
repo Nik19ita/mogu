@@ -1,0 +1,62 @@
+@import "../../constants/constants.scss";
+
+.cases {
+  background-color: #dad4c5;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-top: 64px;
+  padding-bottom: 140px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    padding: 8px;
+    background-color: #ccc7b9;
+    border-radius: 30px;
+  }
+
+  &__left-block {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+  }
+
+  &__h2 {
+    margin-bottom: 8px;
+    font-family: $fontFamilyInter;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #000000;
+  }
+
+  @keyframes paragraf {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  &__p {
+    width: 98%;
+    font-family: $fontFamilyInter;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: #5b605c;
+    animation-name: paragraf;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+}
